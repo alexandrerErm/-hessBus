@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.25585284280936454" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InformationController">
+	<items>
+		<VBox prefHeight="400.0" prefWidth="150.0">
+			<children>
+				<Label prefHeight="55.0" prefWidth="150.0" text="ThessBus">
+					<font>
+						<Font size="36.0" />
+					</font>
+				</Label>
+				<AnchorPane prefHeight="60.0" prefWidth="200.0">
+					<children>
+						<ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+						<Label fx:id="usernameMenu" layoutX="61.0" layoutY="6.0" prefHeight="17.0" prefWidth="82.0" text="Όνομα Χρήστη" />
+						<Label fx:id="balanceMenu" layoutX="61.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Χρήματα" />
+					</children>
+				</AnchorPane>
+				<Button mnemonicParsing="false" onAction="#onClickedStartScreen" prefHeight="60.0" prefWidth="150.0" text="Αρχική">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<padding>
+						<Insets bottom="20.0" top="20.0" />
+					</padding>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/web-page-home.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedHistory" prefHeight="60.0" prefWidth="150.0" text="Ιστορικό">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/circular-clock-.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedPurchase" prefHeight="60.0" prefWidth="150.0" text="Κατάθεση">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/euro-currency-symbol.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedSettings" prefHeight="60.0" prefWidth="150.0" text="Ρυθμίσεις">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/garage-wrench.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedInformation" prefHeight="60.0" prefWidth="150.0" text="Πληροφορίες">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/edit-file.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+			</children>
+		</VBox>
+		<Pane prefHeight="400.0" prefWidth="450.0">
+			<children>
+				<Label layoutX="171.0" layoutY="31.0" text="ΠΛΗΡΟΦΟΡΙΕΣ" textAlignment="CENTER">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Label>
+				<Label alignment="TOP_LEFT" layoutX="28.0" layoutY="76.0" prefHeight="301.0" prefWidth="380.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dictum ante a finibus rutrum. Duis egestas orci nunc, at vestibulum diam malesuada et. Donec et justo sodales, aliquam quam id, commodo enim. Nulla facilisi. Aliquam placerat eleifend pretium. Pellentesque nec arcu laoreet, rutrum quam at, pulvinar lorem. Ut venenatis venenatis nibh et suscipit. Phasellus ultricies ultricies justo, hendrerit dictum urna dignissim commodo.Morbi quis lectus nec leo dapibus dapibus. Aliquam sapien ante, lacinia in molestie sed, placerat sit amet orci. Suspendisse rhoncus nisl quis libero posuere commodo. Praesent mattis sem vitae leo dictum, nec fringilla urna pharetra. Duis egestas ipsum eu libero bibendum malesuada vel eu velit. Integer fringilla mauris ac lorem feugiat volutpat. Phasellus quis luctus metus.Sed rhoncus ipsum maximus gravida accumsan. Pellentesque lobortis maximus massa, eu vehicula arcu efficitur eget. Vivamus sollicitudin arcu nec ante ultricies tempor. Nullam elementum velit ut nisi molestie, et pretium nulla facilisis. Integer eleifend viverra diam" textOverrun="CLIP" wrapText="true" />
+			</children>
+		</Pane>
+	</items>
+</SplitPane>

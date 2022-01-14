@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegisterController">
+	<items>
+		<AnchorPane prefHeight="200.0" prefWidth="200.0">
+			<children>
+				<TextField fx:id="nameField" alignment="CENTER" layoutX="60.0" layoutY="91.0" onAction="#onClickedRegister" promptText="Εισαγωγή Ονόματος">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+            <TextField fx:id="surnameField" alignment="CENTER" layoutX="60.0" layoutY="145.0" onAction="#onClickedRegister" promptText="Εισαγωγή Επωνύμου">
+               <font>
+                  <Font name="Baskerville Old Face" size="13.0" />
+               </font>
+            </TextField>
+				<TextField fx:id="emailField" alignment="CENTER" layoutX="60.0" layoutY="201.0" onAction="#onClickedRegister" promptText="Εισαγωγη Email">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<PasswordField fx:id="passwordField1" alignment="CENTER" layoutX="60.0" layoutY="256.0" onAction="#onClickedRegister" promptText="Εισαγωγή Κωδικού">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</PasswordField>
+				<PasswordField fx:id="passwordField2" alignment="CENTER" layoutX="60.0" layoutY="315.0" onAction="#onClickedRegister" promptText="Εισαγωγή Κωδικού">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</PasswordField>
+				<TextField fx:id="phoneField" alignment="CENTER" layoutX="338.0" layoutY="90.0" onAction="#onClickedRegister" promptText="Εισαγωγή Τηλεφώνου">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+            <TextField fx:id="passportField" alignment="CENTER" layoutX="336.0" layoutY="146.0" onAction="#onClickedRegister" promptText="Εισαγωγή Πάσου">
+               <font>
+                  <Font name="Baskerville Old Face" size="13.0" />
+               </font>
+            </TextField>
+				<TextField fx:id="idField" alignment="CENTER" layoutX="336.0" layoutY="200.0" onAction="#onClickedRegister" promptText="Εισαγωγή Ταυτότητας">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+            <TextField fx:id="cardField" alignment="CENTER" layoutX="336.0" layoutY="256.0" onAction="#onClickedRegister" promptText="Εισαγωγή Κάρτας">
+               <font>
+                  <Font name="Baskerville Old Face" size="13.0" />
+               </font>
+            </TextField>
+				<Text layoutX="60.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Όνομα *">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Text layoutX="59.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Επώνυμο *" wrappingWidth="80.99998980760574">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Button layoutX="389.0" layoutY="325.0" mnemonicParsing="false" onAction="#onClickedRegister" text="Εγγραφη">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Button>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="63.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/αρχείο%20λήψης.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="62.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/αρχείο%20λήψης.png" />
+					</image>
+				</ImageView>
+				<Text layoutX="60.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email *" wrappingWidth="56.92382454872131">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Text layoutX="60.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Κωδικός *" wrappingWidth="69.951171875">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="63.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/lock-24-512.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="62.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/mail-black-envelope-symbol%20(1).png" />
+					</image>
+				</ImageView>
+				<Text layoutX="60.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Επαλήθευση κωδικού *" wrappingWidth="180.00000268220901">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="63.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/lock-24-512.png" />
+					</image>
+				</ImageView>
+				<Text layoutX="338.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Τηλέφωνο">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Text layoutX="340.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αρ. Πάσου" wrappingWidth="80.9999942779541">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="341.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/id2.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="340.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/phone.png" />
+					</image>
+				</ImageView>
+				<Text layoutX="338.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αρ. Ταυτότητας">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Text layoutX="338.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αρ. Κάρτας ΟΑΣΘ" wrappingWidth="157.951171875">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="341.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/id2.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="340.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/id2.png" />
+					</image>
+				</ImageView>
+				<Hyperlink layoutX="60.0" layoutY="33.0" onAction="#onHyperlinkGoBack" text="Πίσω" />
+			</children>
+		</AnchorPane>
+	</items>
+</SplitPane>

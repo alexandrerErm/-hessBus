@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.25585284280936454" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsController">
+	<items>
+		<VBox prefHeight="400.0" prefWidth="150.0">
+			<children>
+				<Label prefHeight="55.0" prefWidth="150.0" text="ThessBus">
+					<font>
+						<Font size="36.0" />
+					</font>
+				</Label>
+				<AnchorPane prefHeight="60.0" prefWidth="200.0">
+					<children>
+						<ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+						<Label fx:id="usernameMenu" layoutX="61.0" layoutY="6.0" prefHeight="17.0" prefWidth="82.0" text="Όνομα Χρήστη" />
+						<Label fx:id="balanceMenu" layoutX="61.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Χρήματα" />
+					</children>
+				</AnchorPane>
+				<Button mnemonicParsing="false" onAction="#onClickedStartScreen" prefHeight="60.0" prefWidth="150.0" text="Αρχική">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<padding>
+						<Insets bottom="20.0" top="20.0" />
+					</padding>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/web-page-home.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedHistory" prefHeight="60.0" prefWidth="150.0" text="Ιστορικό">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/circular-clock-.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedPurchase" prefHeight="60.0" prefWidth="150.0" text="Κατάθεση">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/euro-currency-symbol.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedSettings" prefHeight="60.0" prefWidth="150.0" text="Ρυθμίσεις">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/garage-wrench.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedInformation" prefHeight="60.0" prefWidth="150.0" text="Πληροφορίες">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/edit-file.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+			</children>
+		</VBox>
+		<Pane prefHeight="400.0" prefWidth="450.0">
+			<children>
+				<TextField fx:id="nameField" alignment="CENTER" layoutX="17.0" layoutY="89.0" prefHeight="29.0" prefWidth="172.0" promptText="  Εισαγωγή Ονόματος">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="27.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Όνομα">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="24.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/αρχείο%20λήψης.png" />
+					</image>
+				</ImageView>
+				<TextField fx:id="subnameField" alignment="CENTER" layoutX="17.0" layoutY="147.0" prefHeight="29.0" prefWidth="172.0" promptText="  Εισαγωγή Επωνύμου">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="27.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Επώνυμο">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="24.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/αρχείο%20λήψης.png" />
+					</image>
+				</ImageView>
+				<TextField fx:id="emailField" alignment="CENTER" layoutX="18.0" layoutY="208.0" prefHeight="29.0" prefWidth="172.0" promptText="Εισαγωγή Email">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="28.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="23.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/mail-black-envelope-symbol%20(1).png" />
+					</image>
+				</ImageView>
+				<Text layoutX="30.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Επαλήθευση Κωδικού">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<PasswordField fx:id="passwordField" alignment="CENTER" layoutX="18.0" layoutY="271.0" prefHeight="29.0" prefWidth="172.0" promptText="Κωδικός" />
+				<PasswordField fx:id="confirmpasswordField" alignment="CENTER" layoutX="20.0" layoutY="338.0" prefHeight="29.0" prefWidth="172.0" promptText="Επαλήθευση Κωδικού">
+					<font>
+						<Font size="13.0" />
+					</font>
+				</PasswordField>
+				<TextField fx:id="phoneField" alignment="CENTER" layoutX="224.0" layoutY="89.0" prefHeight="29.0" prefWidth="172.0" promptText="     Εισαγωγή Τηλεφώνου">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="234.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Τηλέφωνο">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="229.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/phone.png" />
+					</image>
+				</ImageView>
+				<TextField fx:id="passportField" alignment="CENTER" layoutX="224.0" layoutY="147.0" prefHeight="29.0" prefWidth="172.0" promptText="Εισαγωγή Πάσου">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="234.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αρ. Πάσου">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="229.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/id2.png" />
+					</image>
+				</ImageView>
+				<TextField fx:id="idField" alignment="CENTER" layoutX="225.0" layoutY="208.0" prefHeight="29.0" prefWidth="172.0" promptText="     Εισαγωγή Ταυτότητας">
+					<font>
+						<Font size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="235.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αρ. Ταυτότητας">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="230.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/id2.png" />
+					</image>
+				</ImageView>
+				<TextField fx:id="cardnumField" alignment="CENTER" layoutX="226.0" layoutY="272.0" prefHeight="29.0" prefWidth="172.0" promptText="Εισαγωγή Κάρτας">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<Text layoutX="236.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αρ. Κάρτας ΟΑΣΘ">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="230.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/id2.png" />
+					</image>
+				</ImageView>
+				<Button fx:id="saveButton" layoutX="257.0" layoutY="337.0" mnemonicParsing="false" onAction="#onClickSave" text="Αποθήκευση">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Button>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="23.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/lock-24-512.png" />
+					</image>
+				</ImageView>
+				<Text layoutX="29.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Κωδικός">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="23.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/lock-24-512.png" />
+					</image>
+				</ImageView>
+				<Hyperlink layoutX="41.0" layoutY="24.0" onAction="#onHyperlinkGoBack" text="Πίσω" />
+			</children>
+		</Pane>
+	</items>
+</SplitPane>

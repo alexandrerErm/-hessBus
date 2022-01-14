@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.25585284280936454" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TicketController">
+
+	<items>
+		<VBox fx:id="navBarVBox" prefHeight="400.0" prefWidth="150.0">
+			<children>
+				<Label prefHeight="55.0" prefWidth="150.0" text="ThessBus">
+					<font>
+						<Font size="36.0" />
+					</font>
+				</Label>
+				<AnchorPane prefHeight="60.0" prefWidth="200.0">
+					<children>
+						<ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+						<Label fx:id="usernameMenu" layoutX="61.0" layoutY="6.0" prefHeight="17.0" prefWidth="82.0" text="Όνομα Χρήστη" />
+						<Label fx:id="balanceMenu" layoutX="61.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Χρήματα" />
+					</children>
+				</AnchorPane>
+				<Button mnemonicParsing="false" onAction="#onClickedStartScreen" prefHeight="60.0" prefWidth="150.0" text="Αρχική">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<padding>
+						<Insets bottom="20.0" top="20.0" />
+					</padding>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/web-page-home.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedHistory" prefHeight="60.0" prefWidth="150.0" text="Ιστορικό">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/circular-clock-.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedPurchase" prefHeight="60.0" prefWidth="150.0" text="Κατάθεση">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/euro-currency-symbol.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedSettings" prefHeight="60.0" prefWidth="150.0" text="Ρυθμίσεις">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/garage-wrench.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedInformation" prefHeight="60.0" prefWidth="150.0" text="Πληροφορίες">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/edit-file.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+			</children>
+		</VBox>
+		<Pane fx:id="buttonsPane" prefHeight="400.0" prefWidth="450.0">
+			<children>
+				<Button fx:id="oneWayNormal" layoutX="41.0" layoutY="60.0" mnemonicParsing="false" onAction="#onClickedOneWay" pickOnBounds="false" prefHeight="40.0" prefWidth="150.0" text="Κανονικό 1,00€  &gt;" textAlignment="CENTER" />
+				<Button fx:id="oneWayReduced" layoutX="237.0" layoutY="60.0" mnemonicParsing="false" onAction="#onClickedOneWay" prefHeight="40.0" prefWidth="150.0" text="Μειωμένο 0,50€  &gt;" textAlignment="CENTER" />
+				<Button fx:id="twoWayNormal" layoutX="41.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClickedTwoWay" prefHeight="40.0" prefWidth="150.0" text="Δ.Δ/Κανονικό 1,20€  &gt;" />
+				<Button fx:id="twoWayReduced" layoutX="237.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClickedTwoWay" prefHeight="40.0" prefWidth="150.0" text="Δ.Δ/Μειωμένο 0,60€  &gt;" />
+				<Hyperlink fx:id="signOutHyperlink" alignment="CENTER" contentDisplay="CENTER" layoutX="333.0" layoutY="355.0" onAction="#onClickedSignOut" prefHeight="29.0" prefWidth="108.0" text="Αποσύνδεση" textFill="DEEPSKYBLUE" underline="true">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Hyperlink>
+				<Hyperlink layoutX="41.0" layoutY="24.0" onAction="#onHyperlinkGoBack" text="Πίσω" />
+			<ComboBox fx:id="busesComboBox" layoutX="129.0" layoutY="23.0" onAction="#comboBoxChoice" prefHeight="25.0" prefWidth="184.0" />
+            <Button fx:id="ThreeWayNormal" layoutX="41.0" layoutY="183.0" mnemonicParsing="false" onAction="#onClickedThreeWay" prefHeight="40.0" prefWidth="150.0" text="Τρ.Δ/Κανονικό 1,50€  &gt;" />
+            <Button fx:id="ThreeWayReduced" layoutX="237.0" layoutY="183.0" mnemonicParsing="false" onAction="#onClickedThreeWay" prefHeight="40.0" prefWidth="150.0" text="Τρ.Δ/Μειωμένο 0,80€  &gt;" />
+            <Button fx:id="FourWayNormal" layoutX="41.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickedFourWay" prefHeight="40.0" prefWidth="150.0" text="Τε.Δ/Κανονικό 2,00€  &gt;" />
+            <Button fx:id="FourWayReduced" layoutX="237.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClickedFourWay" prefHeight="40.0" prefWidth="150.0" text="Τε.Δ/Μειωμένο 1,00€  &gt;" />
+            <Button fx:id="AirportNormal" layoutX="41.0" layoutY="305.0" mnemonicParsing="false" onAction="#onClickedAirport" prefHeight="40.0" prefWidth="150.0" text="Αεροδρόμιο 2,00€ &gt;" />
+            <Button fx:id="AirportReduced" layoutX="237.0" layoutY="305.0" mnemonicParsing="false" onAction="#onClickedAirport" prefHeight="40.0" prefWidth="150.0" text="Αεροδρόμιο 1,00€  &gt;" />
+			</children>
+		</Pane>
+	</items>
+</SplitPane>

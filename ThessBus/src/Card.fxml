@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.25585284280936454" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CardController">
+	<items>
+		<VBox fx:id="navBarVBox" prefHeight="400.0" prefWidth="150.0">
+			<children>
+				<Label prefHeight="55.0" prefWidth="150.0" text="ThessBus">
+					<font>
+						<Font size="36.0" />
+					</font>
+				</Label>
+				<AnchorPane prefHeight="60.0" prefWidth="200.0">
+					<children>
+						<ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+						<Label fx:id="usernameMenu" layoutX="61.0" layoutY="6.0" prefHeight="17.0" prefWidth="82.0" text="Όνομα Χρήστη" />
+						<Label fx:id="balanceMenu" layoutX="61.0" layoutY="28.0" prefHeight="17.0" prefWidth="49.0" text="Χρήματα" />
+					</children>
+				</AnchorPane>
+				<Button mnemonicParsing="false" onAction="#onClickedStartScreen" prefHeight="60.0" prefWidth="163.0" text="Αρχική">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<padding>
+						<Insets bottom="20.0" top="20.0" />
+					</padding>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/web-page-home.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedHistory" prefHeight="57.0" prefWidth="150.0" text="Ιστορικό">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/circular-clock-.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedPurchase" prefHeight="58.0" prefWidth="165.0" text="Κατάθεση">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/euro-currency-symbol.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedSettings" prefHeight="58.0" prefWidth="164.0" text="Ρυθμίσεις">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/garage-wrench.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+				<Button mnemonicParsing="false" onAction="#onClickedInformation" prefHeight="59.0" prefWidth="168.0" text="Πληροφορίες">
+					<font>
+						<Font size="14.0" />
+					</font>
+					<graphic>
+						<ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+							<image>
+								<Image url="@../Images/edit-file.png" />
+							</image>
+						</ImageView>
+					</graphic>
+				</Button>
+			</children>
+		</VBox>
+		<AnchorPane fx:id="buttonsPane" prefHeight="200.0" prefWidth="200.0">
+			<children>
+				<Button fx:id="monthlyNormal" layoutX="40.0" layoutY="81.0" mnemonicParsing="false" onAction="#generateMonthlyCard" prefHeight="50.0" prefWidth="150.0" text="Μηνιαία 30€" />
+				<Button fx:id="threeMonthsNormal" layoutX="40.0" layoutY="141.0" mnemonicParsing="false" onAction="#generateThreeMonthsCard" prefHeight="50.0" prefWidth="150.0" text="Τριμηνιαία 84€" />
+				<Button fx:id="sixMonthsNormal" layoutX="40.0" layoutY="206.0" mnemonicParsing="false" onAction="#generateSixMonthsCard" prefHeight="50.0" prefWidth="150.0" text="Εξαμηνιαία 150€" />
+				<Button fx:id="annualNormal" layoutX="40.0" layoutY="271.0" mnemonicParsing="false" onAction="#generateAnnualCard" prefHeight="50.0" prefWidth="150.0" text="Ετήσια 270€" />
+				<Hyperlink fx:id="signOutHyperlink" alignment="CENTER" contentDisplay="CENTER" layoutX="333.0" layoutY="355.0" onAction="#onClickedSignOut" prefHeight="29.0" prefWidth="108.0" text="Αποσύνδεση" textFill="DEEPSKYBLUE" underline="true">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Hyperlink>
+				<Hyperlink layoutX="41.0" layoutY="24.0" onAction="#onHyperlinkGoBack" text="Πίσω" />
+            <Button fx:id="monthlyReduced" layoutX="243.0" layoutY="81.0" mnemonicParsing="false" onAction="#generateMonthlyCard" prefHeight="50.0" prefWidth="150.0" text="Μηνιαία 15€" />
+            <Button fx:id="threeMonthsReduced" layoutX="243.0" layoutY="141.0" mnemonicParsing="false" onAction="#generateThreeMonthsCard" prefHeight="50.0" prefWidth="150.0" text="Τριμηνιαία 42€" />
+            <Button fx:id="sixMonthsReduced" layoutX="243.0" layoutY="206.0" mnemonicParsing="false" onAction="#generateSixMonthsCard" prefHeight="50.0" prefWidth="150.0" text="Εξαμηνιαία 75€" />
+            <Button fx:id="annualReduced" layoutX="243.0" layoutY="271.0" mnemonicParsing="false" onAction="#generateAnnualCard" prefHeight="50.0" prefWidth="150.0" text="Ετήσια 135€" />
+			</children>
+		</AnchorPane>
+	</items>
+</SplitPane>

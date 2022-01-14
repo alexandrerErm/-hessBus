@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginScreenController">
+	<items>
+		<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+			<children>
+				<Text fill="#000000ca" layoutX="288.0" layoutY="204.0" stroke="#000000c9" strokeType="OUTSIDE" strokeWidth="0.0" text="OR" AnchorPane.bottomAnchor="190.0" AnchorPane.leftAnchor="288.0" AnchorPane.rightAnchor="287.86328125" AnchorPane.topAnchor="191.0">
+					<font>
+						<Font name="Freestyle Script" size="20.0" />
+					</font>
+				</Text>
+				<Line endX="90.0" layoutX="300.0" layoutY="131.0" opacity="0.33" rotate="90.0" scaleX="0.6" startX="-90.0" AnchorPane.bottomAnchor="273.5" />
+				<Line endX="90.0" layoutX="301.0" layoutY="299.0" opacity="0.33" rotate="90.0" scaleX="0.9" startX="-90.0" AnchorPane.bottomAnchor="105.5" AnchorPane.leftAnchor="210.5" AnchorPane.rightAnchor="206.5" AnchorPane.topAnchor="298.5" />
+				<TextField fx:id="usernameField" alignment="CENTER" layoutX="63.0" layoutY="125.0" onAction="#onClickedLogin" promptText="Type your username">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</TextField>
+				<PasswordField fx:id="passwordField" alignment="CENTER" layoutX="63.0" layoutY="180.0" onAction="#onClickedLogin" promptText="Type your password">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</PasswordField>
+				<Text layoutX="63.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Text layoutX="63.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="69.951171875">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Text>
+				<Text layoutX="85.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Δεν έχεις λογαριασμό?">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</Text>
+				<Hyperlink layoutX="98.0" layoutY="313.0" onAction="#onClickedSignUp" text="Εγγράψου τώρα">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</Hyperlink>
+				<Text layoutX="225.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ThessBus">
+					<font>
+						<Font name="Baskerville Old Face" size="38.0" />
+					</font>
+				</Text>
+				<Text layoutX="391.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Τσέκαρε το app">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</Text>
+				<Hyperlink layoutX="373.0" layoutY="197.0" onAction="#onHyperlinkVisitor" text="Συνέχεια ως επισκέπτης">
+					<font>
+						<Font name="Baskerville Old Face" size="13.0" />
+					</font>
+				</Hyperlink>
+				<Button fx:id="loginButton" layoutX="123.0" layoutY="231.0" mnemonicParsing="false" onAction="#onClickedLogin" text="Log In">
+					<font>
+						<Font name="Baskerville Old Face" size="15.0" />
+					</font>
+				</Button>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="66.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/lock-24-512.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="20.0" fitWidth="20.0" layoutX="65.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/αρχείο%20λήψης.png" />
+					</image>
+				</ImageView>
+				<ImageView fitHeight="45.0" fitWidth="44.0" layoutX="419.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../Images/loginscreen_icons/Visitor_2-512.png" />
+					</image>
+				</ImageView>
+			</children>
+		</AnchorPane>
+	</items>
+</SplitPane>
